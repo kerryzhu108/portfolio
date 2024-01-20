@@ -5,8 +5,8 @@ import anime from "animejs"
 
 enum Skill {
   Frontend = "Front End",
-  Tools = "Tools",
-  Backend = "Back End",
+  Backend = "Backend / Tools",
+  Languages = "Languages",
 }
 
 const skills = {
@@ -15,28 +15,32 @@ const skills = {
     ["Redux", "/redux.png"],
     ["Next", "/next.png"],
     ["Tailwind", "/tailwind.png"],
-    ["TypeScript", "/typescript.png"],
-    ["HTML", "/html.png"],
+    ["HTML5", "/html.png"],
     ["CSS", "/css.png"],
-    ["JavaScript", "/javascript.png"],
+    ["DevTools", "/Devtools.png"],
   ],
-  [Skill.Tools]: [
+  [Skill.Backend]: [
     ["Git", "/git.png"],
-    ["Circle CI", "/circleci.png"],
+    ["NodeJS", "/node.png"],
+    ["MongoDB", "/mongo.png"],
+    ["Datadog", "/datadog.png"],
     ["Heroku", "/heroku.jpeg"],
     ["AWS", "/aws.png"],
     ["Unleash", "/unleash.png"],
-    ["DevTools", "/devtools.png"],
-    ["VSCode", "/vscode.png"],
-  ],
-  [Skill.Backend]: [
-    ["NodeJS", "/node.png"],
-    ["SQL", "/sql.png"],
-    ["MongoDB", "/mongo.png"],
-    ["Redis", "/redis.png"],
+    ["Circle CI", "/circleci.png"],
     ["Docker", "/docker.png"],
-    ["Kafka", "/kafka.png"],
-    ["Spark", "/spark.jpeg"],
+    ["Redis", "/redis.png"],
+  ],
+  [Skill.Languages]: [
+    ["TypeScript", "/typescript.png"],
+    ["JavaScript", "/javascript.png"],
+    ["Python", "/python.png"],
+    ["SQL", "/sql.png"],
+    ["Java", "/java.png"],
+    ["C", "/c.png"],
+    ["Go", "/go.png"],
+    ["Kotlin", "/kotlin.png"],
+    ["Swift", "/swift.png"],
   ],
 }
 
@@ -49,7 +53,8 @@ export default function Skills() {
     if (!stack)
       return (
         <div className="text-center">
-          <p className="text-xl">Select a layer on the burger to view stack skills</p>
+          <p className="text-2xl">I always love a good burger!</p>
+          <p className="text-3xl">Select a layer to view stack skills</p>
           <p className="mt-3 text-lg"> - Design by Danny Berger</p>
         </div>
       )
@@ -80,7 +85,7 @@ export default function Skills() {
   useEffect(() => {
     anime({
       targets: ".skill",
-      translateY: { value: -15, duration: 500 },
+      translateY: { value: -10, duration: 500 },
       opacity: 1,
       duration: 500,
       easing: "linear",
@@ -94,17 +99,17 @@ export default function Skills() {
     if (layer == Skill.Frontend) {
       return "/burgerTP.png"
     }
-    if (layer == Skill.Tools) {
+    if (layer == Skill.Backend) {
       return "/burgerMid.png"
     }
     return "/burgerBT.png"
   }
 
   return (
-    <div className="mt-96 lg:mx-36">
+    <div className="lg:px-36 py-28 light">
       <h1 className="text-center text-4xl md:text-5xl font-semibold">Skills</h1>
-      <div className="flex flex-col items-center md:flex-row pb-16 mt-16">
-        <div className="flex justify-center relative w-full px-8">
+      <div className="flex flex-col mt-16 items-center md:flex-row">
+        <div className="flex justify-center relative w-full px-5 py-10">
           <div
             className="absolute"
             style={{ height: burgerSize / 3, width: burgerSize }}
@@ -114,16 +119,16 @@ export default function Skills() {
           />
           <div
             className="absolute"
-            style={{ top: burgerSize / 3, height: burgerSize / 3, width: burgerSize }}
+            style={{ top: burgerSize / 3 + 25, height: burgerSize / 3, width: burgerSize }}
             onMouseEnter={() => {
-              setSelectedLayer(Skill.Tools)
+              setSelectedLayer(Skill.Backend)
             }}
           />
           <div
             className="absolute"
             style={{ top: (burgerSize * 2) / 3, height: burgerSize / 3, width: burgerSize }}
             onMouseEnter={() => {
-              setSelectedLayer(Skill.Backend)
+              setSelectedLayer(Skill.Languages)
             }}
           />
           <Image src={renderBurgerColor(selectedLayer)} alt="burger" width={burgerSize} height={burgerSize} />

@@ -21,15 +21,16 @@ export default function Clouds() {
   useEffect(() => {
     const newClouds = []
     for (let index = 0; index < 30; index++) {
-      const top = Math.random() * 600
+      const top = Math.random() * window.innerHeight - 30
       const left = Math.random() * window.innerWidth
       newClouds.push(
         <Image
+          key={top}
           src={Math.random() > 0.5 ? "/cloud.svg" : "/cloud3.svg"}
           width={Math.random() * 80 + 10}
           height={50}
           alt={"cloud"}
-          className={`cloud-${index} -z-10 absolute`}
+          className={`absolute cloud-${index} z-10 absolute`}
           style={{ top, left, opacity: Math.random() }}
         />
       )

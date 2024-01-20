@@ -7,7 +7,7 @@
   --background-rgb: 255, 255, 255;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 20, 30, 40;
 }
@@ -20,11 +20,12 @@
 .dark {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 20, 30, 40;
-  background-color: #141E28;
+  background-color: #141e28;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
-
