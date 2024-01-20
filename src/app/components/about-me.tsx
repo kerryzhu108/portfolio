@@ -7,14 +7,15 @@ import { useEffect, useState } from "react"
 
 export default function AboutMe() {
   const [reveal, setReveal] = useState(false)
+  const [windowHeight, setWindowHeight] = useState(800)
 
   useEffect(() => {
-    // Triggers animation after page loads
-    setReveal(true)
+    setReveal(true) // Triggers animation after page loads
+    setWindowHeight(window.outerHeight + 10)
   }, [])
 
   return (
-    <div style={{ height: window.outerHeight + 10 }}>
+    <div style={{ height: windowHeight }}>
       <div className="flex w-full sm:w-1/2 justify-center">
         <div className="flex justify-start">
           <div

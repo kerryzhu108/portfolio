@@ -3,7 +3,13 @@ import Project from "./project"
 export default function Projects() {
   return (
     <div className="light pt-36">
-      <h1 className="text-center font-semibold text-4xl md:text-5xl mb-20">Projects</h1>
+      <div className="w-full text-center">
+        <div className="inline-block">
+          <h1 className="text-center text-4xl md:text-5xl font-semibold">Projects</h1>
+          <div className="h-3 md:h-4 bg-[#f36925] -mt-4" />
+        </div>
+      </div>
+      {/* <h1 className="text-center font-semibold text-4xl md:text-5xl mb-20">Projects</h1> */}
       <Project
         title="Next Vacation"
         logo="/travelWhere.png"

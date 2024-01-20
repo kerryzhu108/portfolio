@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useState } from "react"
 import Image from "next/image"
 import anime from "animejs"
+import ThemeToggle from "./theme-toggle"
 
 enum Skill {
   Frontend = "Front End",
@@ -107,7 +108,12 @@ export default function Skills() {
 
   return (
     <div className="lg:px-36 py-28 light">
-      <h1 className="text-center text-4xl md:text-5xl font-semibold">Skills</h1>
+      <div className="w-full text-center">
+        <div className="inline-block">
+          <h1 className="text-center text-4xl md:text-5xl font-semibold">Skills</h1>
+          <div className="h-3 md:h-4 bg-[#f36925] -mt-4" />
+        </div>
+      </div>
       <div className="flex flex-col mt-16 items-center md:flex-row">
         <div className="flex justify-center relative w-full px-5 py-10">
           <div
