@@ -15,18 +15,18 @@ export default function AboutMe() {
   }, [])
 
   return (
-    <div style={{ height: windowHeight }}>
-      <div className="flex w-full xl:w-1/2 full justify-center">
+    <div style={{ height: windowHeight }} className="flex flex-col justify-center">
+      <div className="flex w-full xl:w-1/2 justify-center">
         <div className="flex justify-start">
           <div
-            className="flex flex-col overflow-hidden text-nowrap"
+            className="flex flex-col overflow-hidden text-nowrap -mt-32"
             style={{
               transition: "width 0.6s ease-in-out",
               width: reveal ? "100%" : "0",
             }}
           >
             <Clouds />
-            <div className="text-3xl md:text-7xl bg-opacity-60 z-20 mt-80">
+            <div className="text-3xl sm:text-6xl bg-opacity-60 z-20">
               <h1 className="font-semibold" style={{ fontWeight: 500 }}>
                 Hi, I&apos;m Kerry Zhu
               </h1>

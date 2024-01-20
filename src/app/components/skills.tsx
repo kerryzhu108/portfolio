@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import anime from "animejs"
 import ThemeToggle from "./theme-toggle"
@@ -54,14 +54,14 @@ export default function Skills() {
     if (!stack)
       return (
         <div className="text-center">
-          <p className="text-2xl">I always love a good burger</p>
+          <p className="text-2xl">I always love a good burger~</p>
           <p className="text-3xl">Select a layer to view stack skills</p>
           <p className="mt-3 text-lg"> - Design by Danny Berger</p>
         </div>
       )
     return (
       <div className="flex justify-center">
-        <div className="flex flex-wrap justify-center max-w-[500px]">
+        <div className="flex flex-wrap justify-center max-w-[600px]">
           {skills[stack].map((skill) => {
             return (
               <div key={skill[0]} className="skill opacity-30 mx-4 my-4 text-center items-center flex flex-col">
@@ -107,14 +107,14 @@ export default function Skills() {
   }
 
   return (
-    <div className="lg:px-36 py-28 light">
+    <div className="lg:px-36 lg:py-28 light">
       <div className="w-full text-center">
         <div className="inline-block">
           <h1 className="text-center text-4xl md:text-5xl font-semibold">Skills</h1>
           <div className="h-3 md:h-4 bg-[#f36925] -mt-4" />
         </div>
       </div>
-      <div className="flex flex-col mt-16 items-center md:flex-row">
+      <div className="flex items-center md:flex-row flex-col-reverse min-h-[500px]">
         <div className="w-full">
           <h1 className="text-5xl text-center my-5">{selectedLayer}</h1>
           {renderSkills(selectedLayer)}
