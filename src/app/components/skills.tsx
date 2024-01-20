@@ -54,7 +54,7 @@ export default function Skills() {
     if (!stack)
       return (
         <div className="text-center">
-          <p className="text-2xl">I always love a good burger!</p>
+          <p className="text-2xl">I always love a good burger</p>
           <p className="text-3xl">Select a layer to view stack skills</p>
           <p className="mt-3 text-lg"> - Design by Danny Berger</p>
         </div>
@@ -115,12 +115,19 @@ export default function Skills() {
         </div>
       </div>
       <div className="flex flex-col mt-16 items-center md:flex-row">
+        <div className="w-full">
+          <h1 className="text-5xl text-center my-5">{selectedLayer}</h1>
+          {renderSkills(selectedLayer)}
+        </div>
         <div className="flex justify-center relative w-full px-5 py-10">
           <div
             className="absolute"
             style={{ height: burgerSize / 3, width: burgerSize }}
             onMouseEnter={() => {
               setSelectedLayer(Skill.Frontend)
+            }}
+            onMouseLeave={() => {
+              setSelectedLayer("")
             }}
           />
           <div
@@ -129,6 +136,9 @@ export default function Skills() {
             onMouseEnter={() => {
               setSelectedLayer(Skill.Backend)
             }}
+            onMouseLeave={() => {
+              setSelectedLayer("")
+            }}
           />
           <div
             className="absolute"
@@ -136,12 +146,11 @@ export default function Skills() {
             onMouseEnter={() => {
               setSelectedLayer(Skill.Languages)
             }}
+            onMouseLeave={() => {
+              setSelectedLayer("")
+            }}
           />
           <Image src={renderBurgerColor(selectedLayer)} alt="burger" width={burgerSize} height={burgerSize} />
-        </div>
-        <div className="w-full">
-          <h1 className="text-5xl text-center my-5">{selectedLayer}</h1>
-          {renderSkills(selectedLayer)}
         </div>
       </div>
     </div>

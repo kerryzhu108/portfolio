@@ -11,12 +11,12 @@ export default function AboutMe() {
 
   useEffect(() => {
     setReveal(true) // Triggers animation after page loads
-    setWindowHeight(window.outerHeight + 10)
+    setWindowHeight(window.innerHeight - 70)
   }, [])
 
   return (
     <div style={{ height: windowHeight }}>
-      <div className="flex w-full sm:w-1/2 justify-center">
+      <div className="flex w-full xl:w-1/2 full justify-center">
         <div className="flex justify-start">
           <div
             className="flex flex-col overflow-hidden text-nowrap"
@@ -26,8 +26,10 @@ export default function AboutMe() {
             }}
           >
             <Clouds />
-            <div className="text-3xl md:text-6xl bg-opacity-60 z-20 mt-72">
-              <h1 className="font-semibold">Hi, I&apos;m Kerry Zhu</h1>
+            <div className="text-3xl md:text-7xl bg-opacity-60 z-20 mt-80">
+              <h1 className="font-semibold" style={{ fontWeight: 500 }}>
+                Hi, I&apos;m Kerry Zhu
+              </h1>
               <div className="h-3 md:h-5 w-full bg-[#f36925] -mt-4" />
               <div
                 className="overflow-hidden"
@@ -36,13 +38,13 @@ export default function AboutMe() {
                   width: reveal ? "100%" : "0",
                 }}
               >
-                <h1 className="text-3xl">Software Engineer</h1>
+                <h1 className="text-2xl md:text-4xl">Software Engineer</h1>
                 <div className="flex mt-5 text-2xl md:text-3xl">
-                  <a href="https://github.com/kerryzhu108/">
+                  <a href="https://github.com/kerryzhu108/" target="_">
                     {" "}
                     <FontAwesomeIcon icon={faGithub} size="lg" className="mr-4" />
                   </a>
-                  <a href="https://www.linkedin.com/in/kerry-zhu-kz/">
+                  <a href="https://www.linkedin.com/in/kerry-zhu-kz/" target="_">
                     {" "}
                     <FontAwesomeIcon icon={faLinkedin} size="lg" className="mr-4" />
                   </a>

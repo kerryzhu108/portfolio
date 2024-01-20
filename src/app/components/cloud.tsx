@@ -21,7 +21,7 @@ export default function Clouds() {
   useEffect(() => {
     const newClouds = []
     for (let index = 0; index < 30; index++) {
-      const top = Math.random() * window.innerHeight - 30
+      const top = Math.random() * window.innerHeight - 200
       const left = Math.random() * window.innerWidth
       newClouds.push(
         <Image

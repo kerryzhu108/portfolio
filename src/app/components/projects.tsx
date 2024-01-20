@@ -20,7 +20,7 @@ export default function Projects() {
         }
         website={"https://my-next-vacation.vercel.app/"}
         sourceCode={"https://github.com/kerryzhu108/travel-where"}
-        video={"https://www.youtube.com/embed/_k1U4kvbaMk?si=5Zpv5soBgOjX1mta"}
+        video={"https://www.youtube.com/embed/l2nXbrP5ahs?si=W_tcOV9I8jpO2lTS"}
       />
       <Project
         title="Klear"

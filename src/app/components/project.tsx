@@ -39,12 +39,12 @@ export default function Project({
             <div className="mt-3 text-xl whitespace-pre-wrap">{descroption}</div>
             <div className="flex my-4 text-nowrap text-white font-semibold">
               {website && (
-                <a href={website} className={`bg-teal-600 rounded-sm px-5 py-3 w-full mr-2 text-center`}>
+                <a href={website} target="_" className={`bg-teal-600 rounded-sm px-5 py-3 w-full mr-2 text-center`}>
                   Visit Wesbite
                 </a>
               )}
               {sourceCode && (
-                <a href={sourceCode} className={`bg-[#f36925] rounded-sm px-5 py-3 w-full text-center`}>
+                <a href={sourceCode} target="_" className={`bg-[#f36925] rounded-sm px-5 py-3 w-full text-center`}>
                   Source Code
                 </a>
               )}
