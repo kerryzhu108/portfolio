@@ -110,7 +110,7 @@ export default function Skills() {
     <div className="lg:px-36 lg:py-28 light">
       <div className="w-full text-center">
         <div className="inline-block">
-          <h1 className="text-center text-4xl md:text-5xl font-semibold">Skills</h1>
+          <h1 className="mt-10 sm:mt-0 text-center text-4xl md:text-5xl font-semibold">Skills</h1>
           <div className="h-3 md:h-4 bg-[#f36925] -mt-4" />
         </div>
       </div>

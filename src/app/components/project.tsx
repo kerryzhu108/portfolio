@@ -19,7 +19,7 @@ export default function Project({
   video: string
 }) {
   return (
-    <div className="flex-1 justify-center mt-32 px-10 md:px-32 pb-16">
+    <div className="flex-1 justify-center mt-10 mb-22 px-10 md:px-32 pb-16">
       <div className="md:flex justify-center">
         <div className="flex flex-1 items-center justify-center bg-gray-300s">
           <div className="max-w-[400px]">
