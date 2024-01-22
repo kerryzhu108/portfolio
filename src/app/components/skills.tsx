@@ -142,7 +142,7 @@ export default function Skills() {
           />
           <div
             className="absolute"
-            style={{ top: (burgerSize * 2) / 3, height: burgerSize / 3, width: burgerSize }}
+            style={{ top: (burgerSize * 2) / 3 + 25, height: burgerSize / 3, width: burgerSize }}
             onMouseEnter={() => {
               setSelectedLayer(Skill.Languages)
             }}
