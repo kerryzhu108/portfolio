@@ -12,25 +12,31 @@ enum Skill {
 
 const skills = {
   [Skill.Frontend]: [
+    ["Next", "/next.png"],
     ["React", "/react.png"],
     ["Redux", "/redux.png"],
-    ["Next", "/next.png"],
     ["Tailwind", "/tailwind.png"],
     ["HTML5", "/html.png"],
     ["CSS", "/css.png"],
-    ["DevTools", "/Devtools.png"],
+    ["Figma", "/figma.png"],
+    ["DevTools", "/devtools.png"],
   ],
   [Skill.Backend]: [
-    ["Git", "/git.png"],
-    ["NodeJS", "/node.png"],
+    ["GCP", "/gcp.png"],
+    ["Dataflow", "/dataflow.png"],
+    ["Pub/Sub", "/pubsub.png"],
+    ["Big Query", "/bigquery.webp"],
+    ["Cloud Bucket", "/bucket.png"],
+    ["AWS", "/aws.png"],
     ["MongoDB", "/mongo.png"],
+    ["Vercel", "/vercel.svg"],
+    ["Redis", "/redis.png"],
+    ["NodeJS", "/node.png"],
     ["Datadog", "/datadog.png"],
     ["Heroku", "/heroku.jpeg"],
-    ["AWS", "/aws.png"],
+    ["Git", "/git.png"],
     ["Unleash", "/unleash.png"],
     ["Circle CI", "/circleci.png"],
-    ["Docker", "/docker.png"],
-    ["Redis", "/redis.png"],
   ],
   [Skill.Languages]: [
     ["TypeScript", "/typescript.png"],
@@ -64,7 +70,10 @@ export default function Skills() {
         <div className="flex flex-wrap justify-center max-w-[600px]">
           {skills[stack].map((skill) => {
             return (
-              <div key={skill[0]} className="skill opacity-30 mx-4 my-4 text-center items-center flex flex-col">
+              <div
+                key={skill[0]}
+                className="skill opacity-30 mx-4 my-4 text-center items-center flex flex-col"
+              >
                 <div className="flex justify-center items-center ">
                   <Image
                     src={skill[1]}
@@ -150,7 +159,12 @@ export default function Skills() {
               setSelectedLayer("")
             }}
           />
-          <Image src={renderBurgerColor(selectedLayer)} alt="burger" width={burgerSize} height={burgerSize} />
+          <Image
+            src={renderBurgerColor(selectedLayer)}
+            alt="burger"
+            width={burgerSize}
+            height={burgerSize}
+          />
         </div>
       </div>
     </div>

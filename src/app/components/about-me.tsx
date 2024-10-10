@@ -38,7 +38,7 @@ export default function AboutMe() {
                   width: reveal ? "100%" : "0",
                 }}
               >
-                <h1 className="text-2xl md:text-4xl">Software Engineer</h1>
+                <h1 className="text-2xl md:text-4xl">A Software Engineer</h1>
                 <div className="flex mt-5 text-2xl md:text-3xl">
                   <a href="https://github.com/kerryzhu108/" target="_">
                     {" "}
